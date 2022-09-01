@@ -22,15 +22,8 @@ public class Manager : MonoBehaviour
     void Start()
     {
         instance = GetComponent<Manager>();
-
         Vector2 v = tile.GetComponent<SpriteRenderer>().bounds.size;
         createBoard(v.x, v.y);
-        
-    }
-
-    void Update()
-    {
-        
     }
     private void createBoard(float _x, float _y)
     {
@@ -48,7 +41,7 @@ public class Manager : MonoBehaviour
                 tiles[x, y].name =  "(" + x + " : " + y +")";
                 newTile.transform.parent = transform;
 
-                // ngăn chặn lặp 3 theo phương y 
+                // ngăn chặn lặp 3 
                 List<Sprite> listSprite = new List<Sprite>();
                 listSprite.AddRange(sprites);
                 listSprite.Remove(previousLeft[y]);
@@ -79,7 +72,7 @@ public class Manager : MonoBehaviour
         }
     }
     
-    private IEnumerator ShiftTilesDown(int x, int yStart, float shiftDelay = .03f)
+    private IEnumerator ShiftTilesDown(int x, int yStart, float shiftDelay = .1f)
     {
         IsShifting = true;
         List<SpriteRenderer> renders = new List<SpriteRenderer>();

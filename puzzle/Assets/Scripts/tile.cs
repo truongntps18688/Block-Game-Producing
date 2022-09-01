@@ -29,13 +29,6 @@ public class tile : MonoBehaviour
 		sprite.color = Color.white;
 		previousSelected = null;
 	}
-    void FixedUpdate()
-    {
-        if (previousSelected != null)
-        {
-
-        }
-    }
 
     void OnMouseDown()
 	{

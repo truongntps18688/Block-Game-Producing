@@ -40,9 +40,12 @@ public class nrd : MonoBehaviour
     void Update()
     {   
         addRom(); addRomY();
-        
     }
     void FixedUpdate()
+    {
+        nrdXY();
+    }
+    public void nrdXY()
     {
         xrd(X0, 0);
         xrd(X1, 1);

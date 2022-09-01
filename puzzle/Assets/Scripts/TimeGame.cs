@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class TimeGame : MonoBehaviour
 {
     public Slider slider;
-    public float time = 20f;
-    public float times = 20f;
+    public float time = 10f;
+    public float times = 10f;
 
     public static TimeGame Instance { get; private set; }
     private void Awake()
@@ -15,7 +15,7 @@ public class TimeGame : MonoBehaviour
         Instance = this;
     }
     
-    public void addTime(int _time)
+    public void addTime(float _time)
     {
         time += _time;
     }
@@ -25,6 +25,11 @@ public class TimeGame : MonoBehaviour
         time -= Time.deltaTime;
 
         slider.value = time / times;
+
+        if(time > times)
+        {
+            time = 20;
+        }
 
     }
 }

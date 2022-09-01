@@ -17,7 +17,12 @@ public class MenuGame : MonoBehaviour
     }
     public void Reset()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
 }

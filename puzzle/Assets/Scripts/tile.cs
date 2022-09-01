@@ -60,7 +60,7 @@ public class tile : MonoBehaviour
                 {
                     swap(previousSelected.sprite);
                     previousSelected.Deselect();
-                    
+                    TimeGame.Instance.addTime(-0.5f);
                 }
                 else
                 {

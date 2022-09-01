@@ -331,6 +331,7 @@ public class nrd : MonoBehaviour
         transform.GetChild(index - 1).GetComponent<SpriteRenderer>().sprite = null;
         StopCoroutine(Manager.instance.FindNullTiles());
         StartCoroutine(Manager.instance.FindNullTiles());
+        TimeGame.Instance.addTime(.75f);
     }
     private void spriteY_(int index)
     {
@@ -339,6 +340,7 @@ public class nrd : MonoBehaviour
         transform.GetChild(index - 8).GetComponent<SpriteRenderer>().sprite = null;
         StopCoroutine(Manager.instance.FindNullTiles());
         StartCoroutine(Manager.instance.FindNullTiles());
+        TimeGame.Instance.addTime(.75f);
     }
     // rút gọn
     private void Compact(int i, int x, int[] list)

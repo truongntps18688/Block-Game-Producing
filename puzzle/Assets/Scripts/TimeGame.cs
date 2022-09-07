@@ -17,6 +17,8 @@ public class TimeGame : MonoBehaviour
     {
         Instance = this;
     }
+
+    
     
     public void addTime(float _time)
     {
